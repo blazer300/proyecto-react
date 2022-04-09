@@ -35,8 +35,8 @@ const ItemDetail = ({ item }) => {
             {isInCart ? (
               <Link to={`/login/${item.model}`}>
                 <button className="button-terminar-compra" type="button">
-                  Terminar Compra
-                </button>
+                  Terminar Compra{" "}
+                </button>{" "}
               </Link>
             ) : (
               <ItemCount addToCart={addToCart} stock={item.stock} />

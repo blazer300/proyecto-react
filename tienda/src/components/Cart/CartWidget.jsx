@@ -1,6 +1,6 @@
 import React from "react";
-import { useContext } from "react";
-import CartContext from "../context/CartContext"; 
+import { useContext } from "react"; //!SE IMPORTA PARA UTILZAR EL useContex EN hooks
+import CartContext from "../context/CartContext"; //!SE ENLAZA NUESTRA CARPETA DONDE ESTA LA FUNCTION DEL useContext
 import { Link } from "react-router-dom";
 
 const CartWidget = () => {
@@ -9,6 +9,8 @@ const CartWidget = () => {
 
   return (
     <>
+      {/* ESTE SERIA EL CONTADOR DEL CART DE LA IMG */}
+
       <div className="cart">
         {totalItemCart}
         <div className="cart-img-wrapper">
@@ -28,6 +30,7 @@ const CartWidget = () => {
             </span>
           </div>
         </div>
+        {/* ESTE PUEDE SER EL BUTTON PARA ELIMIDAR LOS PRODUCTO ASIGNADO AL CART */}
         <button onClick={clearCart} className="clear-cart">
           {" "}
           Clear Cart{" "}
